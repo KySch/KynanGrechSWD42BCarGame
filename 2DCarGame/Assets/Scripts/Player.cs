@@ -9,8 +9,8 @@ public class Player : MonoBehaviour
     float xMin, xMax, yMin, yMax;
 
     [SerializeField] float padding = 0.7f;
+    [SerializeField] float CarSpeed = 10f;
 
-    // Start is called before the first frame update
     void Start()
     {
         ViewPortToWorldPoint();
@@ -29,6 +29,15 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Move();
     }
+
+    private void Move()
+    {
+        var deltaX = Input.GetAxis("Horizontal") * Time.deltaTime * CarSpeed;
+        var newXPos = Mathf.Clamp(transform.position.x + deltaX, xMin, xMax);
+
+        transform.position = new Vector2(newXPos, transform.position.y);
+    }
+
 }
