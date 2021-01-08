@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class Background : MonoBehaviour
 {
-    [SerializeField] float racingCarSpeed = 0.02f;
+    [SerializeField] Player player;
     Material myMaterial;
     Vector2 offSet;
     void Start()
     {
         myMaterial = GetComponent<Renderer>().material;
-        offSet = new Vector2(0f, racingCarSpeed);
+        offSet = new Vector2(0f, (player.returnCarSpeed()/10));
     }
 
     void Update()

@@ -1,33 +1,36 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 using UnityEngine;
 
-public class ObstaclePaths : MonoBehaviour
+public class EnemyPathing : MonoBehaviour
 {
     [SerializeField] List<Transform> waypoints;
-    [SerializeField] Waves waves;
+    [SerializeField] ObstacleWaves waveConfig;
 
     int waypointIndex = 0;
 
     void Start()
     {
         transform.position = waypoints[waypointIndex].transform.position;
-        waypoints = waves.GetWaypoints();
+        waypoints = waveConfig.GetWaypoints();
     }
 
     // Update is called once per frame
     void Update()
     {
-        ObstacleMove();
+        EnemyMove();
     }
 
-    public void SetWaveConfig(Waves waveToSet)
+    //setting up a WaveConfig
+    public void SetWaveConfig(ObstacleWaves waveConfigToSet)
     {
-        waves = waveToSet;
+        waveConfig = waveConfigToSet;
     }
 
 
-    private void ObstacleMove()
+    private void EnemyMove()
     {
         if (waypointIndex <= waypoints.Count - 1)
         {
@@ -35,9 +38,9 @@ public class ObstaclePaths : MonoBehaviour
 
             targetPosition.z = 0f;
 
-            var obstacleMovement = waves.GetEnemyMoveSpeed() * Time.deltaTime;
+            var enemyMovement = waveConfig.GetObstacleMoveSpeed() * Time.deltaTime;
 
-            transform.position = Vector2.MoveTowards(transform.position, targetPosition, obstacleMovement);
+            transform.position = Vector2.MoveTowards(transform.position, targetPosition, enemyMovement);
 
             if (transform.position == targetPosition)
             {
@@ -53,4 +56,3 @@ public class ObstaclePaths : MonoBehaviour
 
     }
 }
-

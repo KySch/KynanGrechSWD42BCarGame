@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5791595846869003846}
   - component: {fileID: 5791595846869003847}
+  - component: {fileID: -2738231423480981178}
+  - component: {fileID: 6009844757655344960}
   m_Layer: 0
   m_Name: Rock
   m_TagString: Untagged
@@ -25,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5791595846869003848}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.95, y: 1.73, z: -0.1}
+  m_LocalPosition: {x: 7, y: 7, z: -1}
   m_LocalScale: {x: 0.6800332, y: 0.71202993, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -82,3 +84,59 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &-2738231423480981178
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5791595846869003848}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.5, y: 0.02}
+      - {x: 0.25, y: 0.34}
+      - {x: 0.14, y: 0.34}
+      - {x: -0.19999999, y: 0.26999998}
+      - {x: -0.22999999, y: 0.24}
+      - {x: -0.32, y: 0.099999994}
+      - {x: -0.42999998, y: 0.07}
+      - {x: -0.48, y: -0.01}
+      - {x: -0.48, y: -0.26}
+      - {x: -0.39999998, y: -0.41}
+      - {x: -0.35999998, y: -0.45}
+      - {x: -0.16, y: -0.48}
+      - {x: 0.07, y: -0.48}
+      - {x: 0.32, y: -0.42999998}
+      - {x: 0.5, y: -0.35999998}
+--- !u!114 &6009844757655344960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5791595846869003848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33c766b828ca64a40977dfb3e693f369, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints:
+  - {fileID: 5704204169541471612, guid: 0b01cc7b39b7cd44db2c2bb97b8b3525, type: 3}
+  - {fileID: 1847722381621149892, guid: 2c11cb8cb8c69eb489e30c8bd19806b0, type: 3}
+  waveConfig: {fileID: 11400000, guid: 1b00e85afe7b95c41a3b21931745dde3, type: 2}

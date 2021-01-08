@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3254845703969692922}
   - component: {fileID: 3254845703969692923}
+  - component: {fileID: 3004202166706692941}
+  - component: {fileID: -6751843005512881545}
   m_Layer: 0
   m_Name: Tree
   m_TagString: Untagged
@@ -25,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3254845703969692924}
   m_LocalRotation: {x: -0.004834946, y: -0.004866343, z: -0.70479804, w: 0.70937485}
-  m_LocalPosition: {x: 2.4, y: 2.04, z: -0.1}
+  m_LocalPosition: {x: 7, y: 7, z: -1}
   m_LocalScale: {x: 1.4537721, y: 1.3187386, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -82,3 +84,83 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &3004202166706692941
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3254845703969692924}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.73, y: 1}
+    newSize: {x: 0.73, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.235, y: -0.22}
+      - {x: 0.265, y: -0.17999999}
+      - {x: 0.235, y: -0.12}
+      - {x: 0.205, y: -0.11}
+      - {x: 0.36499998, y: -0.049999997}
+      - {x: 0.36499998, y: 0.02}
+      - {x: 0.355, y: 0.03}
+      - {x: 0.225, y: 0.13}
+      - {x: 0.205, y: 0.13}
+      - {x: 0.175, y: 0.12}
+      - {x: 0.21499999, y: 0.14}
+      - {x: 0.315, y: 0.28}
+      - {x: 0.275, y: 0.41}
+      - {x: 0.225, y: 0.39999998}
+      - {x: 0.125, y: 0.32}
+      - {x: 0.13499999, y: 0.48}
+      - {x: 0.095, y: 0.5}
+      - {x: 0.005, y: 0.5}
+      - {x: -0.16499999, y: 0.34}
+      - {x: -0.155, y: 0.29999998}
+      - {x: -0.114999995, y: 0.25}
+      - {x: -0.155, y: 0.26}
+      - {x: -0.185, y: 0.26}
+      - {x: -0.235, y: 0.31}
+      - {x: -0.255, y: 0.31}
+      - {x: -0.33499998, y: 0.24}
+      - {x: -0.33499998, y: 0.099999994}
+      - {x: -0.315, y: 0.07}
+      - {x: -0.16499999, y: 0.01}
+      - {x: -0.065, y: -0.11}
+      - {x: -0.114999995, y: -0.16}
+      - {x: -0.155, y: -0.28}
+      - {x: -0.16499999, y: -0.42999998}
+      - {x: -0.205, y: -0.47}
+      - {x: -0.205, y: -0.48999998}
+      - {x: -0.195, y: -0.5}
+      - {x: 0.114999995, y: -0.5}
+      - {x: 0.035, y: -0.29999998}
+      - {x: 0.055, y: -0.17999999}
+--- !u!114 &-6751843005512881545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3254845703969692924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33c766b828ca64a40977dfb3e693f369, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints:
+  - {fileID: 5704204169541471612, guid: 0b01cc7b39b7cd44db2c2bb97b8b3525, type: 3}
+  - {fileID: 1847722381621149892, guid: 2c11cb8cb8c69eb489e30c8bd19806b0, type: 3}
+  waveConfig: {fileID: 11400000, guid: 744eaee43fd181442a3303bda8dae323, type: 2}

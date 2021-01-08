@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5876807874723239826}
   - component: {fileID: 5876807874723239837}
+  - component: {fileID: 5498246056892367606}
+  - component: {fileID: 7393254748663187231}
   m_Layer: 0
   m_Name: TraficCone
   m_TagString: Untagged
@@ -25,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5876807874723239836}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.68, y: 1.65, z: -0.1}
+  m_LocalPosition: {x: 7, y: 7, z: -1}
   m_LocalScale: {x: 0.14055803, y: 0.12556969, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -82,3 +84,99 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &5498246056892367606
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5876807874723239836}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4, y: 5.1}
+    newSize: {x: 4, y: 5.1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.75, y: -1.87}
+      - {x: 0.95, y: -1.77}
+      - {x: 0.97999996, y: -1.66}
+      - {x: 1.15, y: -1.67}
+      - {x: 1.25, y: -1.5699999}
+      - {x: 1.4499999, y: -1.4699999}
+      - {x: 1.48, y: -1.36}
+      - {x: 1.65, y: -1.37}
+      - {x: 1.75, y: -1.27}
+      - {x: 1.86, y: -1.15}
+      - {x: 1.86, y: -1.03}
+      - {x: 1.79, y: -0.9}
+      - {x: 1.35, y: -0.5}
+      - {x: 1.0699999, y: -0.31}
+      - {x: 0.96999997, y: -0.29}
+      - {x: 0.97999996, y: -0.02}
+      - {x: 0.87, y: 0.01}
+      - {x: 0.88, y: 0.28}
+      - {x: 0.77, y: 0.31}
+      - {x: 0.78, y: 0.58}
+      - {x: 0.66999996, y: 0.61}
+      - {x: 0.68, y: 0.88}
+      - {x: 0.57, y: 0.90999997}
+      - {x: 0.58, y: 1.18}
+      - {x: 0.47, y: 1.2099999}
+      - {x: 0.48, y: 1.48}
+      - {x: 0.37, y: 1.51}
+      - {x: 0.38, y: 1.78}
+      - {x: 0.28, y: 1.88}
+      - {x: 0.16, y: 1.99}
+      - {x: -0.06, y: 1.99}
+      - {x: -0.17999999, y: 1.9}
+      - {x: -0.28, y: 1.8}
+      - {x: -0.78, y: 0.26999998}
+      - {x: -0.97999996, y: -0.29999998}
+      - {x: -1.0699999, y: -0.39}
+      - {x: -1.27, y: -0.48999998}
+      - {x: -1.37, y: -0.59}
+      - {x: -1.49, y: -0.71999997}
+      - {x: -1.66, y: -0.81}
+      - {x: -1.68, y: -0.83}
+      - {x: -1.77, y: -0.89}
+      - {x: -1.88, y: -1.01}
+      - {x: -1.88, y: -1.16}
+      - {x: -1.78, y: -1.26}
+      - {x: -1.16, y: -1.55}
+      - {x: -1.0699999, y: -1.65}
+      - {x: -0.65999997, y: -1.8499999}
+      - {x: -0.57, y: -1.9499999}
+      - {x: -0.16, y: -2.1499999}
+      - {x: -0.06, y: -2.25}
+      - {x: 0.14, y: -2.25}
+      - {x: 0.26, y: -2.1599998}
+      - {x: 0.45, y: -2.07}
+      - {x: 0.65, y: -1.9699999}
+--- !u!114 &7393254748663187231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5876807874723239836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33c766b828ca64a40977dfb3e693f369, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints:
+  - {fileID: 5704204169541471612, guid: 0b01cc7b39b7cd44db2c2bb97b8b3525, type: 3}
+  - {fileID: 1847722381621149892, guid: 2c11cb8cb8c69eb489e30c8bd19806b0, type: 3}
+  waveConfig: {fileID: 11400000, guid: 2a732074ba2aa8446a2e32f28d77da39, type: 2}
