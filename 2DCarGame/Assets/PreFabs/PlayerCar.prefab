@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7653961565711701083}
   - component: {fileID: 7653961565711701080}
-  - component: {fileID: -7089361061499583384}
+  - component: {fileID: -3563355896946895646}
+  - component: {fileID: -4208751164789571784}
   m_Layer: 0
   m_Name: PlayerCar
   m_TagString: Untagged
@@ -83,8 +84,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!68 &-7089361061499583384
-EdgeCollider2D:
+--- !u!114 &-3563355896946895646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7653961565711701081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cae6c097978c90643a2807aed8b673fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  padding: 0.7
+  CarSpeed: 10
+--- !u!60 &-4208751164789571784
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -97,26 +112,37 @@ EdgeCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1.97}
+    newSize: {x: 1, y: 1.97}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   m_Points:
-  - {x: -0.031231582, y: -0.9094107}
-  - {x: -0.36406028, y: -0.8697374}
-  - {x: -0.45544887, y: -0.6666019}
-  - {x: -0.41452414, y: -0.014763355}
-  - {x: -0.45891762, y: 0.15509105}
-  - {x: -0.4232827, y: 0.4734559}
-  - {x: -0.3850209, y: 0.7490711}
-  - {x: -0.22269666, y: 0.92566824}
-  - {x: -0.027596474, y: 0.97868013}
-  - {x: 0.23053277, y: 0.91649604}
-  - {x: 0.3656081, y: 0.7025938}
-  - {x: 0.43466163, y: 0.44041157}
-  - {x: 0.4467411, y: 0.14036202}
-  - {x: 0.37352526, y: -0.17246032}
-  - {x: 0.41637123, y: -0.7945478}
-  - {x: 0.30328774, y: -0.9073479}
-  - {x: -0.034395874, y: -0.9375367}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
+    m_Paths:
+    - - {x: 0.48, y: 0.095}
+      - {x: 0.48999998, y: 0.125}
+      - {x: 0.48999998, y: 0.24499999}
+      - {x: 0.45, y: 0.265}
+      - {x: 0.47, y: 0.615}
+      - {x: 0.38, y: 0.825}
+      - {x: 0.24, y: 0.945}
+      - {x: 0.089999996, y: 0.98499995}
+      - {x: -0.13, y: 0.98499995}
+      - {x: -0.28, y: 0.92499995}
+      - {x: -0.38, y: 0.825}
+      - {x: -0.47, y: 0.615}
+      - {x: -0.45999998, y: 0.355}
+      - {x: -0.5, y: 0.225}
+      - {x: -0.5, y: 0.125}
+      - {x: -0.42999998, y: 0.085}
+      - {x: -0.48, y: -0.765}
+      - {x: -0.41, y: -0.885}
+      - {x: -0.22999999, y: -0.965}
+      - {x: 0.17, y: -0.965}
+      - {x: 0.39999998, y: -0.885}
+      - {x: 0.48, y: -0.765}
+      - {x: 0.44, y: -0.385}

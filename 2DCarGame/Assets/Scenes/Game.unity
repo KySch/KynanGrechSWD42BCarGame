@@ -223,6 +223,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   padding: 0.7
   CarSpeed: 5
+  playerHealth: 50
+  enemyDeathSound: {fileID: 8300000, guid: 700056813a56a7944935eacebb9a06cb, type: 3}
+  enemyDeathSoundVolume: 0.75
 --- !u!1 &1784193870
 GameObject:
   m_ObjectHideFlags: 0

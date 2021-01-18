@@ -8,8 +8,8 @@ public class Enemy : MonoBehaviour
     [SerializeField] float minTimeBetweenShots = 0.2f;
     [SerializeField] float maxTimeBetweenShots = 3f;
     [SerializeField] float health = 100;
-    [SerializeField] GameObject enemyLaserPrefab;
-    [SerializeField] float enemyLaserSpeed = 0.2f;
+    [SerializeField] GameObject enemyBulletPrefab;
+    [SerializeField] float enemyBulletSpeed = 0.3f;
 
     void Start()
     {
@@ -46,12 +46,16 @@ public class Enemy : MonoBehaviour
 
         DamageDealer damageDealer = other.gameObject.GetComponent<DamageDealer>();
         health -= damageDealer.GetDamage();
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
     private void EnemyFire()
     {
-        GameObject enemyLaser = Instantiate(enemyLaserPrefab, transform.position, Quaternion.identity) as GameObject;
+        GameObject enemyLaser = Instantiate(enemyBulletPrefab, transform.position, Quaternion.identity) as GameObject;
         //enemy laser shoots downwards, hence -enemyLaserSpeed
-        enemyLaser.GetComponent<Rigidbody2D>().velocity = new Vector2(0, - enemyLaserSpeed);
+        enemyLaser.GetComponent<Rigidbody2D>().velocity = new Vector2(0, - enemyBulletSpeed);
     }
 
 }

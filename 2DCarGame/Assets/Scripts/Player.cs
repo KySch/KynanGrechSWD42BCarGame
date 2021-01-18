@@ -10,7 +10,12 @@ public class Player : MonoBehaviour
 
     [SerializeField] float padding = 0.7f;
     [SerializeField] float CarSpeed = 10f;
- 
+    [SerializeField] float playerHealth = 100;
+    [SerializeField] AudioClip enemyDeathSound;
+
+    [SerializeField] [Range(0, 1)] float enemyDeathSoundVolume = 0.75f;
+
+
     void Start()
     {
         ViewPortToWorldPoint();
@@ -43,4 +48,23 @@ public class Player : MonoBehaviour
         transform.position = new Vector2(newXPos, transform.position.y);
     }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        //access the Damage Dealer from the "other" object which hit the enemy
+        //and depending on the laser damage reduce health
+        DamageDealer damageDealer = other.gameObject.GetComponent<DamageDealer>();
+        ProcessHit(damageDealer);
+    }
+
+    private void ProcessHit(DamageDealer damageDealer)
+    {
+        playerHealth -= damageDealer.GetDamage();
+
+        AudioSource.PlayClipAtPoint(enemyDeathSound, Camera.main.transform.position, enemyDeathSoundVolume);
+
+        if (playerHealth <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
 }

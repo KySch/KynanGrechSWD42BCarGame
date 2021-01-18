@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3254845703969692923}
   - component: {fileID: 3004202166706692941}
   - component: {fileID: -6751843005512881545}
+  - component: {fileID: 1891102289541414592}
   m_Layer: 0
   m_Name: Tree
   m_TagString: Untagged
@@ -164,3 +165,22 @@ MonoBehaviour:
   - {fileID: 5704204169541471612, guid: 0b01cc7b39b7cd44db2c2bb97b8b3525, type: 3}
   - {fileID: 1847722381621149892, guid: 2c11cb8cb8c69eb489e30c8bd19806b0, type: 3}
   waveConfig: {fileID: 11400000, guid: 744eaee43fd181442a3303bda8dae323, type: 2}
+--- !u!114 &1891102289541414592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3254845703969692924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f6c5d77ce4481a43a34668d1f90145e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shotCounter: 0
+  minTimeBetweenShots: 0.2
+  maxTimeBetweenShots: 3
+  health: 100
+  enemyBulletPrefab: {fileID: 5457008488358842655, guid: d4063a7413afc0e4080b904c4a02c645,
+    type: 3}
+  enemyBulletSpeed: 5
