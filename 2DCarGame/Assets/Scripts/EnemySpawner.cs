@@ -61,6 +61,4 @@ public class EnemySpawner : MonoBehaviour
             yield return StartCoroutine(SpawnAllEnemiesInWave(currentWave));
         }
     }
-
-
 }

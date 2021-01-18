@@ -132,4 +132,4 @@ MonoBehaviour:
   waypoints:
   - {fileID: 5704204169541471612, guid: 0b01cc7b39b7cd44db2c2bb97b8b3525, type: 3}
   - {fileID: 1847722381621149892, guid: 2c11cb8cb8c69eb489e30c8bd19806b0, type: 3}
-  waveConfig: {fileID: 0}
+  waveConfig: {fileID: 11400000, guid: a52323a6e4a34f94e8b497c9ca807e33, type: 2}
