@@ -18,4 +18,3 @@ public class Background : MonoBehaviour
         myMaterial.mainTextureOffset += offSet * Time.deltaTime;
     }
 }
-

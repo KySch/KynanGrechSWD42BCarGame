@@ -22,7 +22,6 @@ public class Enemy : MonoBehaviour
     }
 
 
-    // Update is called once per frame
     void Update()
     {
         CountDownAndShoot();
@@ -32,17 +31,14 @@ public class Enemy : MonoBehaviour
 
     private void CountDownAndShoot()
     {
-        //every frame reduces the amount of time that the frame takes to run
         shotCounter -= Time.deltaTime;
         if (shotCounter <= 0f)
         {
             EnemyFire();
-            //reset shotCounter after every fire
             shotCounter = Random.Range(minTimeBetweenShots, maxTimeBetweenShots);
         }
     }
 
-    //reduces health whenever enemy collides with a gameObject which has DamageDealer component
     private void OnTriggerEnter2D(Collider2D other)
     {
         DamageDealer damageDealer = other.gameObject.GetComponent<DamageDealer>();
@@ -59,7 +55,7 @@ public class Enemy : MonoBehaviour
     private void EnemyFire()
     {
         GameObject enemyLaser = Instantiate(enemyBulletPrefab, transform.position, Quaternion.identity) as GameObject;
-        //enemy laser shoots downwards, hence -enemyLaserSpeed
-        enemyLaser.GetComponent<Rigidbody2D>().velocity = new Vector2(0, - enemyBulletSpeed);
+        enemyLaser.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -enemyBulletSpeed);
     }
 
+}

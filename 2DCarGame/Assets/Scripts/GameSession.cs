@@ -27,13 +27,11 @@ public class GameSession : MonoBehaviour
 
     }
 
-    //get the value of score
     public int GetScore()
     {
         return score;
     }
 
-    //add scoreValue to score
     public void AddToScore(int scoreValue)
     {
         score += scoreValue;

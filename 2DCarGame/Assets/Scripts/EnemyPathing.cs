@@ -17,13 +17,11 @@ public class EnemyPathing : MonoBehaviour
         waypoints = waveConfig.GetWaypoints();
     }
 
-    // Update is called once per frame
     void Update()
     {
         EnemyMove();
     }
 
-    //setting up a WaveConfig
     public void SetWaveConfig(ObstacleWaves waveConfigToSet)
     {
         waveConfig = waveConfigToSet;

@@ -35,7 +35,6 @@ public class Player : MonoBehaviour
         xMax = gameCamera.ViewportToWorldPoint(new Vector3(1, 0, 0)).x - padding;
     }
 
-    // Update is called once per frame
     void Update()
     {
         Move();
@@ -61,8 +60,6 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        //access the Damage Dealer from the "other" object which hit the enemy
-        //and depending on the laser damage reduce health
         DamageDealer damageDealer = other.gameObject.GetComponent<DamageDealer>();
         ProcessHit(damageDealer);
     }

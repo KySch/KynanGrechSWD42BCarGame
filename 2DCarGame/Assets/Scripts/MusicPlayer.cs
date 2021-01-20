@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class MusicPlayer : MonoBehaviour
 {
-    // Start is called before the first frame update
     void Awake()
     {
         SetUpSingleton();
@@ -19,13 +18,10 @@ public class MusicPlayer : MonoBehaviour
         }
         else
         {
-            //Do not destroy the MusicPlayer gameObject when changing scenes
             DontDestroyOnLoad(gameObject);
         }
     }
 
-
-    // Update is called once per frame
     void Update()
     {
         
