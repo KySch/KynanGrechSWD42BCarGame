@@ -11,7 +11,7 @@ public class Player : MonoBehaviour
 
     [SerializeField] float padding = 0.7f;
     [SerializeField] float CarSpeed = 10f;
-    [SerializeField] float playerHealth = 100;
+    [SerializeField] int playerHealth = 100;
     [SerializeField] AudioClip playerHitSound;
     [SerializeField] AudioClip playerExplodeSound;
     [SerializeField] float Points = 0;
@@ -39,6 +39,11 @@ public class Player : MonoBehaviour
     void Update()
     {
         Move();
+    }
+
+    public int GetHealth()
+    {
+        return playerHealth;
     }
 
     public float returnCarSpeed()
