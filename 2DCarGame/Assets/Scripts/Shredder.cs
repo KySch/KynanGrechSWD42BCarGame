@@ -13,7 +13,6 @@ public class Shredder : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        print(collision.gameObject.name);
         Destroy(collision.gameObject);
         FindObjectOfType<GameSession>().AddToScore(scoreValue);
     }

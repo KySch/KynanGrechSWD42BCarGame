@@ -155,10 +155,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f6c5d77ce4481a43a34668d1f90145e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreValue: 5
   shotCounter: 0
   minTimeBetweenShots: 100000
   maxTimeBetweenShots: 100000
-  health: 1
   enemyBulletPrefab: {fileID: 5457008488358842655, guid: d4063a7413afc0e4080b904c4a02c645,
     type: 3}
   enemyBulletSpeed: 0.3

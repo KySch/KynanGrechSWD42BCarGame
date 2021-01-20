@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
 
     float xMin, xMax;
 
-    [SerializeField] float padding = 0.7f;
+    [SerializeField] float padding = .75f;
     [SerializeField] float CarSpeed = 10f;
     [SerializeField] int playerHealth = 100;
     [SerializeField] AudioClip playerHitSound;
@@ -27,7 +27,9 @@ public class Player : MonoBehaviour
         ViewPortToWorldPoint();
     }
 
-    private void ViewPortToWorldPoint()
+
+
+    public void ViewPortToWorldPoint()
     {
         Camera gameCamera = Camera.main;
 
@@ -50,13 +52,7 @@ public class Player : MonoBehaviour
         return CarSpeed;
     }
 
-    private void Move()
-    {
-        var deltaX = Input.GetAxis("Horizontal") * Time.deltaTime * CarSpeed;
-        var newXPos = Mathf.Clamp(transform.position.x + deltaX, xMin, xMax);
 
-        transform.position = new Vector2(newXPos, transform.position.y);
-    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -77,6 +73,14 @@ public class Player : MonoBehaviour
             Die();
         }
     }
+    public void Move()
+    {
+        var deltaX = Input.GetAxis("Horizontal") * Time.deltaTime * CarSpeed;
+        var newXPos = Mathf.Clamp(transform.position.x + deltaX, xMin, xMax);
+
+        transform.position = new Vector2(newXPos, transform.position.y);
+    }
+    
     private void Die()
     {
         AudioSource.PlayClipAtPoint(playerExplodeSound, Camera.main.transform.position, playerExplodeSoundVol);

@@ -99,7 +99,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   padding: 0.7
   CarSpeed: 10
-  playerHealth: 100
+  playerHealth: 50
   playerHitSound: {fileID: 8300000, guid: 700056813a56a7944935eacebb9a06cb, type: 3}
   playerExplodeSound: {fileID: 8300000, guid: 50e93a9bd8731e74986d9221f2f2fd2c, type: 3}
   Points: 0

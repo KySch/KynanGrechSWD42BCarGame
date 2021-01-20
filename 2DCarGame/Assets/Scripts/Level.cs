@@ -23,7 +23,7 @@ public class Level : MonoBehaviour
 
     public void QuitGame()
     {
-        Application;
+        Application.Quit();
     }
 
     IEnumerator WaitAndLoad()
