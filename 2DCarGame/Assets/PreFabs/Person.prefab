@@ -160,10 +160,9 @@ MonoBehaviour:
   shotCounter: 0
   minTimeBetweenShots: 1
   maxTimeBetweenShots: 3
-  health: 1
   enemyBulletPrefab: {fileID: 5457008488358842655, guid: d4063a7413afc0e4080b904c4a02c645,
     type: 3}
-  enemyBulletSpeed: 5
+  enemyBulletSpeed: 4
   deathVFX: {fileID: 3275097040792595002, guid: 488b27fbc49e425408570f3677a4a95a,
     type: 3}
   explosionDuration: 0.25
