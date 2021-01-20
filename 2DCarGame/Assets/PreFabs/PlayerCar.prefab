@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 7653961565711701080}
   - component: {fileID: -3563355896946895646}
   - component: {fileID: -4208751164789571784}
-  m_Layer: 0
+  - component: {fileID: 4652369441456949620}
+  m_Layer: 8
   m_Name: PlayerCar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,6 +99,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   padding: 0.7
   CarSpeed: 10
+  playerHealth: 100
+  playerHitSound: {fileID: 8300000, guid: 700056813a56a7944935eacebb9a06cb, type: 3}
+  playerExplodeSound: {fileID: 8300000, guid: 50e93a9bd8731e74986d9221f2f2fd2c, type: 3}
+  Points: 0
+  deathVFX: {fileID: 3275097040792595002, guid: 488b27fbc49e425408570f3677a4a95a,
+    type: 3}
+  explosionDuration: 0.25
+  playerHitSoundVol: 0.217
+  playerExplodeSoundVol: 0.223
 --- !u!60 &-4208751164789571784
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -146,3 +156,16 @@ PolygonCollider2D:
       - {x: 0.39999998, y: -0.885}
       - {x: 0.48, y: -0.765}
       - {x: 0.44, y: -0.385}
+--- !u!114 &4652369441456949620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7653961565711701081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06c8ff4a5d4985549b200edc3b8d5acb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 100

@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+
+    [Header("Shooting")]
     [SerializeField] float shotCounter;
     [SerializeField] float minTimeBetweenShots = 0.2f;
     [SerializeField] float maxTimeBetweenShots = 3f;
-    [SerializeField] float health = 100;
     [SerializeField] GameObject enemyBulletPrefab;
     [SerializeField] float enemyBulletSpeed = 0.3f;
+
+    [Header("Effects")]
+    [SerializeField] GameObject deathVFX;
+    [SerializeField] float explosionDuration;
 
     void Start()
     {
@@ -40,17 +45,17 @@ public class Enemy : MonoBehaviour
     //reduces health whenever enemy collides with a gameObject which has DamageDealer component
     private void OnTriggerEnter2D(Collider2D other)
     {
-
-        //access the Damage Dealer from the "other" object which hit the enemy
-        //and depending on the laser damage reduce health
-
         DamageDealer damageDealer = other.gameObject.GetComponent<DamageDealer>();
-        health -= damageDealer.GetDamage();
-        if (health <= 0)
-        {
-            Destroy(gameObject);
-        }
+        ProcessHit(damageDealer);
     }
+
+    private void ProcessHit(DamageDealer damageDealer)
+    {
+        Destroy(gameObject);
+        GameObject explosion = Instantiate(deathVFX, transform.position, Quaternion.identity);
+        Destroy(explosion, 1f);
+    }
+
     private void EnemyFire()
     {
         GameObject enemyLaser = Instantiate(enemyBulletPrefab, transform.position, Quaternion.identity) as GameObject;

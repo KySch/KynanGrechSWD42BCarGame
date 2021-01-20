@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -11,9 +12,14 @@ public class Player : MonoBehaviour
     [SerializeField] float padding = 0.7f;
     [SerializeField] float CarSpeed = 10f;
     [SerializeField] float playerHealth = 100;
-    [SerializeField] AudioClip enemyDeathSound;
+    [SerializeField] AudioClip playerHitSound;
+    [SerializeField] AudioClip playerExplodeSound;
+    [SerializeField] float Points = 0;
+    [SerializeField] GameObject deathVFX;
+    [SerializeField] float explosionDuration;
 
-    [SerializeField] [Range(0, 1)] float enemyDeathSoundVolume = 0.75f;
+    [SerializeField] [Range(0, 1)] float playerHitSoundVol = 0.75f;
+    [SerializeField] [Range(0, 1)] float playerExplodeSoundVol = 0.75f;
 
 
     void Start()
@@ -60,11 +66,21 @@ public class Player : MonoBehaviour
     {
         playerHealth -= damageDealer.GetDamage();
 
-        AudioSource.PlayClipAtPoint(enemyDeathSound, Camera.main.transform.position, enemyDeathSoundVolume);
+        damageDealer.Hit();
 
-        if (playerHealth <= 0)
+        AudioSource.PlayClipAtPoint(playerHitSound, Camera.main.transform.position, playerHitSoundVol);
+
+        if (playerHealth <= 0 && Points < 100)
         {
-            Destroy(gameObject);
+            Die();
         }
+    }
+    private void Die()
+    {
+        AudioSource.PlayClipAtPoint(playerExplodeSound, Camera.main.transform.position, playerExplodeSoundVol);
+        Destroy(gameObject);
+        GameObject explosion = Instantiate(deathVFX, transform.position, Quaternion.identity);
+        Destroy(explosion, 1f);
+        FindObjectOfType<Level>().LoadGameOver();
     }
 }
